@@ -1,0 +1,17 @@
+# combined
+[global]
+direct=1
+ioengine=external:/usr/lib/libxnvme-fio-engine.so
+group_reporting
+time_based
+runtime=300
+rw=randread
+filename=laio\:/dev/nvme0n1
+#size doesnt matter since its time_based
+size=25g
+thread=1
+bs=4k
+
+[iops]
+name=quicktest
+stonewall
